@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph Murphy · Lead Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"Space Mono"', 'monospace'],
+            display: ['Syne', 'sans-serif'],
+          },
+          colors: {
+            bg:      '#080b0f',
+            panel:   '#0f1419',
+            border:  '#1c2330',
+            border2: '#3a4a60',
+            accent:  '#00d4ff',
+            accent2: '#00ff88',
+            dim:     '#8b95a5',
+            bright:  '#e6edf3',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Syne', sans-serif; scroll-behavior: smooth; }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px);
+      pointer-events: none; z-index: 50;
+    }
+    .grid-bg {
+      position: fixed; inset: 0;
+      background-image: linear-gradient(rgba(0,212,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.025) 1px, transparent 1px);
+      background-size: 44px 44px; pointer-events: none;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
+    .pulse { animation: blink 1.8s ease-in-out infinite; }
+    .proj-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #00d4ff, #00ff88);
+      transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+    }
+    .proj-card:hover::before { transform: scaleX(1); }
+    .fi { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fi.v { opacity: 1; transform: none; }
+  </style>
+</head>
+<body class="bg-bg text-gray-300 overflow-x-hidden">
+  <div class="grid-bg"></div>
+
+  <!-- NAV -->
+  <nav class="fixed top-0 inset-x-0 z-40 h-14 flex items-center justify-between px-4 sm:px-10 bg-bg/90 backdrop-blur-md border-b border-border">
+    <span class="font-mono text-[0.65rem] sm:text-xs text-accent tracking-wide before:content-['>'] before:text-accent2 before:mr-2 truncate mr-4">
+      JMURPHY <span class="hidden sm:inline">&nbsp;/&nbsp; LEAD SOFTWARE ENGINEER</span>
+    </span>
+    <ul class="flex font-mono text-[0.58rem] list-none shrink-0">
+      <li><a href="#experience" class="block px-2 sm:px-4 h-14 leading-[3.5rem] text-dim hover:text-accent hover:bg-accent/5 border-l border-border transition-all tracking-widest">EXP</a></li>
+      <li><a href="#projects"   class="block px-2 sm:px-4 h-14 leading-[3.5rem] text-dim hover:text-accent hover:bg-accent/5 border-l border-border transition-all tracking-widest">PROJ</a></li>
+      <li><a href="#contact"    class="block px-2 sm:px-4 h-14 leading-[3.5rem] text-dim hover:text-accent hover:bg-accent/5 border-l border-r border-border transition-all tracking-widest">CONTACT</a></li>
+    </ul>
+    <div class="hidden sm:flex items-center gap-2 font-mono text-[0.58rem] text-accent2 tracking-widest ml-4">
+      <span class="pulse w-1.5 h-1.5 rounded-full bg-accent2 inline-block"></span>
+      OPEN TO WORK
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-center px-5 sm:px-10 pt-24 sm:pt-28 pb-16 max-w-6xl mx-auto relative">
+    <p class="font-mono text-[0.65rem] text-dim tracking-[0.12em] mb-6 flex items-center gap-4">
+      // MEMPHIS, TN · LEAD SOFTWARE ENGINEER
+      <span class="block h-px w-16 bg-border2"></span>
+    </p>
+    <h1 class="font-display font-extrabold leading-[0.92] tracking-tight text-bright mb-4" style="font-size: clamp(2.8rem, 10vw, 6rem)">
+      <span class="text-dim">Hello, I'm</span><br>
+      <span class="text-accent">Joseph</span><br>
+      Murphy.
+    </h1>
+    <p class="font-mono text-accent2 tracking-wider mb-6 text-[0.75rem] sm:text-[0.9rem]">
+      $ php artisan && vue create . <span class="text-dim">// MBA · 5+ yrs enterprise</span>
+    </p>
+    <p class="text-dim max-w-lg mb-10 leading-loose text-sm">Lead Software Engineer at <strong>Assurant</strong> with a passion for web services and clean architecture. I drive technical leadership on large-scale insurance platforms, mentor engineers, and advocate for clean architecture and testing best practices.</p>
+    <div class="flex gap-3 flex-wrap">
+      <a href="#experience" class="font-mono text-[0.68rem] tracking-widest px-4 sm:px-5 py-3 rounded-sm bg-accent text-black border border-accent hover:bg-transparent hover:text-accent hover:shadow-[0_0_20px_rgba(0,212,255,0.25)] transition-all">VIEW_EXPERIENCE</a>
+      <a href="#contact"    class="font-mono text-[0.68rem] tracking-widest px-4 sm:px-5 py-3 rounded-sm bg-transparent text-dim border border-border2 hover:border-accent hover:text-accent transition-all">GET_IN_TOUCH</a>
+    </div>
+    <div class="hidden lg:flex absolute right-10 top-1/2 -translate-y-1/2 flex-col gap-8" style="writing-mode:vertical-rl">
+      <span class="font-mono text-[0.55rem] text-border2 tracking-[0.2em]">LARAVEL · VUE.JS · PHP · SWIFT</span>
+      <span class="font-mono text-[0.55rem] text-border2 tracking-[0.2em]">MBA · CLEAN ARCH · MENTORSHIP</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="max-w-6xl mx-auto px-5 sm:px-10 py-16 sm:py-24 border-t border-border">
+    <div class="flex items-baseline gap-5 mb-10 sm:mb-14 fi">
+      <span class="font-mono text-[0.65rem] text-accent">01</span>
+      <h2 class="text-2xl font-bold tracking-tight text-bright">Experience</h2>
+      <div class="flex-1 h-px bg-border"></div>
+    </div>
+    
+    <div class="border-t border-border hover:bg-white/[0.01] transition-colors fi">
+      <!-- Mobile: stacked | Desktop: side-by-side -->
+      <div class="flex flex-col sm:grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 px-0">
+        <!-- Left: date + badge -->
+        <div class="flex sm:flex-col gap-3 sm:gap-0 sm:pt-0.5 items-center sm:items-start">
+          <p class="font-mono text-[0.65rem] text-dim leading-relaxed">Oct 2020 → Present</p>
+          <span class="font-mono text-[0.55rem] text-accent2 border border-accent2 px-1.5 py-0.5 rounded-sm tracking-wider whitespace-nowrap">CURRENT</span>
+          <p class="font-mono text-[0.55rem] text-dim hidden sm:block mt-1">5 yrs 6 mos</p>
+        </div>
+        <!-- Right: content -->
+        <div>
+          <p class="font-bold text-bright tracking-tight mb-0.5 text-lg">Assurant</p>
+          <p class="font-mono text-[0.65rem] text-accent tracking-wider mb-4">// LEAD SOFTWARE ENGINEER</p>
+          
+          <ul class="text-dim text-sm leading-loose max-w-xl mb-4 space-y-2 list-none">
+            
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Lead a <strong>team of 6 engineers</strong> on the API side of a large-scale insurance platform serving multinational enterprise clients, owning architectural direction, technical standards, and cross-functional alignment.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Architected and leading delivery of a <strong>public-facing integration API</strong> enabling DMS clients and OEM partners to embed quoting and policy booking directly into their platforms via REST — actively partnering with a DMS client and a major OEM toward a production launch.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Identified zero test coverage as a critical risk and <strong>initiated the project's entire test suite from scratch</strong>, personally driving it from 0% to 55% coverage and establishing testing as a first-class engineering practice.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Established team-wide <strong>PR standards including conventional commits, enforced PR title conventions, and GitHub Actions gates</strong> that block merges on failing tests — reducing QA-stage regressions by an estimated <strong>30%</strong> and bringing consistency and accountability to every code review.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Led a <strong>platform-wide performance initiative</strong>, auditing and eliminating legacy data sources and bottlenecks that unlocked measurable throughput gains across core services.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Partnered with business and data stakeholders to <strong>rationalize and streamline API surface area</strong>, decommissioning irrelevant services and improving overall system cohesion.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Actively grow junior and mid-level engineers through structured <strong>code reviews, architectural mentorship</strong>, and a culture of engineering excellence.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Championed the adoption of <strong>AI-assisted development across the team</strong>, integrating GitHub Copilot into daily development workflows and the code review process to accelerate delivery and surface issues earlier in the feedback loop.</span>
+  </li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">PHP</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Laravel</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">REST APIs</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Automated Testing</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">GitHub Actions</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">GitHub Copilot</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Clean Architecture</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Mentorship</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-border hover:bg-white/[0.01] transition-colors fi">
+      <!-- Mobile: stacked | Desktop: side-by-side -->
+      <div class="flex flex-col sm:grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 px-0">
+        <!-- Left: date + badge -->
+        <div class="flex sm:flex-col gap-3 sm:gap-0 sm:pt-0.5 items-center sm:items-start">
+          <p class="font-mono text-[0.65rem] text-dim leading-relaxed">Apr 2019 → Apr 2020</p>
+          
+          <p class="font-mono text-[0.55rem] text-dim hidden sm:block mt-1">1 yr 1 mo</p>
+        </div>
+        <!-- Right: content -->
+        <div>
+          <p class="font-bold text-bright tracking-tight mb-0.5 text-lg">Follow App</p>
+          <p class="font-mono text-[0.65rem] text-accent tracking-wider mb-4">// TECHNICAL CO-FOUNDER</p>
+          
+          <ul class="text-dim text-sm leading-loose max-w-xl mb-4 space-y-2 list-none">
+            
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Led all technical decisions as co-founder, defining the full <strong>system architecture</strong> for an iOS application and its supporting Web API from concept through production.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Owned the end-to-end engineering roadmap, balancing <strong>product velocity with architectural integrity</strong> in an early-stage startup environment.</span>
+  </li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">iOS / Swift</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Web API</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">System Architecture</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Startup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-b border-border hover:bg-white/[0.01] transition-colors fi">
+      <!-- Mobile: stacked | Desktop: side-by-side -->
+      <div class="flex flex-col sm:grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 px-0">
+        <!-- Left: date + badge -->
+        <div class="flex sm:flex-col gap-3 sm:gap-0 sm:pt-0.5 items-center sm:items-start">
+          <p class="font-mono text-[0.65rem] text-dim leading-relaxed">Apr 2018 → Oct 2020</p>
+          
+          <p class="font-mono text-[0.55rem] text-dim hidden sm:block mt-1">2 yrs 7 mos</p>
+        </div>
+        <!-- Right: content -->
+        <div>
+          <p class="font-bold text-bright tracking-tight mb-0.5 text-lg">EPG Insurance, Inc.</p>
+          <p class="font-mono text-[0.65rem] text-accent tracking-wider mb-1">// SENIOR SOFTWARE ENGINEER</p>
+          <p class="font-mono text-[0.55rem] text-dim mb-4">Memphis Metropolitan Area</p>
+          <ul class="text-dim text-sm leading-loose max-w-xl mb-4 space-y-2 list-none">
+            
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Drove the strategic migration from a <strong>monolithic architecture to a hybrid microservices model</strong>, improving scalability and reducing inter-system coupling.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Led full-stack development of an <strong>international insurance platform</strong> in Laravel and championed the adoption of Vue.js as the front-end standard across the engineering team.</span>
+  </li>
+  <li class="flex gap-2">
+    <span class="text-accent2 mt-1.5 shrink-0">▸</span>
+    <span>Spearheaded a <strong>package-driven refactor</strong> of core business logic into reusable Laravel packages, enabling consistent delivery across a suite of applications.</span>
+  </li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">PHP</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Laravel</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Vue.js</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Microservices</span><span class="font-mono text-[0.58rem] px-2 py-1 bg-panel border border-border2 text-dim rounded-sm">Package Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto px-5 sm:px-10 py-16 sm:py-24 border-t border-border">
+    <div class="flex items-baseline gap-5 mb-10 sm:mb-14 fi">
+      <span class="font-mono text-[0.65rem] text-accent">02</span>
+      <h2 class="text-2xl font-bold tracking-tight text-bright">Projects</h2>
+      <div class="flex-1 h-px bg-border"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border fi">
+      
+  <div class="proj-card relative bg-bg hover:bg-panel transition-colors p-6 overflow-hidden">
+    <p class="font-mono text-[0.58rem] text-border2 tracking-widest mb-4">PROJECT_001</p>
+    <p class="font-bold text-bright tracking-tight mb-2">Assurant Quoting API</p>
+    <p class="text-dim text-xs leading-relaxed mb-5">Global quoting API enabling international partners to generate insurance quotes and apply for coverage programmatically. Designed for scale across multinational clients.</p>
+    <p class="font-mono text-[0.6rem] text-accent tracking-wide">Laravel · REST API · PHP · Enterprise</p>
+  </div>
+  <div class="proj-card relative bg-bg hover:bg-panel transition-colors p-6 overflow-hidden">
+    <p class="font-mono text-[0.58rem] text-border2 tracking-widest mb-4">PROJECT_002</p>
+    <p class="font-bold text-bright tracking-tight mb-2">Follow App</p>
+    <p class="text-dim text-xs leading-relaxed mb-5">Co-founded and architected a full iPhone application and Web API from scratch. Owned all technical decisions from infrastructure to app store deployment.</p>
+    <p class="font-mono text-[0.6rem] text-accent tracking-wide">iOS · Swift · Web API · Architecture</p>
+  </div>
+  <div class="proj-card relative bg-bg hover:bg-panel transition-colors p-6 overflow-hidden">
+    <p class="font-mono text-[0.58rem] text-border2 tracking-widest mb-4">PROJECT_003</p>
+    <p class="font-bold text-bright tracking-tight mb-2">EPG International Insurance System</p>
+    <p class="text-dim text-xs leading-relaxed mb-5">Built an international insurance platform with Laravel and spearheaded the front-end migration to Vue.js. Refactored monolithic core into reusable PHP packages.</p>
+    <p class="font-mono text-[0.6rem] text-accent tracking-wide">Laravel · Vue.js · PHP Packages · Microservices</p>
+  </div>
+  <div class="proj-card relative bg-bg hover:bg-panel transition-colors p-6 overflow-hidden">
+    <p class="font-mono text-[0.58rem] text-border2 tracking-widest mb-4">PROJECT_004</p>
+    <p class="font-bold text-bright tracking-tight mb-2">Automated Test Suite</p>
+    <p class="text-dim text-xs leading-relaxed mb-5">Comprehensive test infrastructure at Assurant to enforce quality standards across teams, reduce regressions, and enable confident large-scale deployments.</p>
+    <p class="font-mono text-[0.6rem] text-accent tracking-wide">PHPUnit · TDD · CI/CD · Quality Assurance</p>
+  </div>
+  <div class="proj-card relative bg-bg hover:bg-panel transition-colors p-6 overflow-hidden">
+    <p class="font-mono text-[0.58rem] text-border2 tracking-widest mb-4">PROJECT_005</p>
+    <p class="font-bold text-bright tracking-tight mb-2">jmurphy.us</p>
+    <p class="text-dim text-xs leading-relaxed mb-5">Personal website and portfolio. Built and maintained as an ongoing project to showcase work, writing, and technical explorations.</p>
+    <p class="font-mono text-[0.6rem] text-accent tracking-wide">Web · Personal · Portfolio</p>
+  </div>
+  <div class="proj-card relative bg-bg hover:bg-panel transition-colors p-6 overflow-hidden">
+    <p class="font-mono text-[0.58rem] text-border2 tracking-widest mb-4">PROJECT_006</p>
+    <p class="font-bold text-bright tracking-tight mb-2">GiveCamp Memphis</p>
+    <p class="text-dim text-xs leading-relaxed mb-5">Annual volunteer event building websites and software for Memphis nonprofits. Active contributor supporting Innovate Memphis and the local tech community.</p>
+    <p class="font-mono text-[0.6rem] text-accent tracking-wide">Community · Nonprofit · Web Development</p>
+  </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-6xl mx-auto px-5 sm:px-10 py-16 sm:py-24 border-t border-border">
+    <div class="flex items-baseline gap-5 mb-10 sm:mb-14 fi">
+      <span class="font-mono text-[0.65rem] text-accent">03</span>
+      <h2 class="text-2xl font-bold tracking-tight text-bright">Contact</h2>
+      <div class="flex-1 h-px bg-border"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border fi">
+      <div class="bg-bg p-7 sm:p-11">
+        <h3 class="text-xl font-bold text-bright tracking-tight mb-3">Let's build something.</h3>
+        <p class="text-dim text-sm leading-loose mb-8 max-w-sm">Open to Lead Software Engineer roles and interesting problems. Memphis-based, but happy to connect anywhere.</p>
+        <a href="mailto:jcmurphy1267@gmail.com" class="font-mono text-sm text-accent border-b border-accent/30 hover:border-accent pb-0.5 transition-all break-all">jcmurphy1267@gmail.com</a>
+      </div>
+      <div class="bg-bg px-7 sm:px-11 py-7 sm:py-0 sm:flex sm:flex-col sm:justify-center">
+        
+  <a href="https://linkedin.com/in/jmurphyiii" target="_blank" class="flex items-center justify-between py-4 border-t border-border text-dim hover:text-bright transition-colors group">
+    <span class="font-mono text-xs tracking-wider">LINKEDIN</span>
+    <span class="font-mono text-[0.62rem] text-border2">in/jmurphyiii</span>
+    <span class="text-sm group-hover:text-accent transition-colors">↗</span>
+  </a>
+  <a href="https://jmurphy.us" target="_blank" class="flex items-center justify-between py-4 border-t border-border text-dim hover:text-bright transition-colors group">
+    <span class="font-mono text-xs tracking-wider">WEBSITE</span>
+    <span class="font-mono text-[0.62rem] text-border2">jmurphy.us</span>
+    <span class="text-sm group-hover:text-accent transition-colors">↗</span>
+  </a>
+  <a href="mailto:jcmurphy1267@gmail.com" target="_blank" class="flex items-center justify-between py-4 border-t border-b border-border text-dim hover:text-bright transition-colors group">
+    <span class="font-mono text-xs tracking-wider">EMAIL</span>
+    <span class="font-mono text-[0.62rem] text-border2">jcmurphy1267@gmail.com</span>
+    <span class="text-sm group-hover:text-accent transition-colors">↗</span>
+  </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="max-w-6xl mx-auto px-5 sm:px-10 py-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-2 text-center">
+    <span class="font-mono text-[0.58rem] text-dim tracking-wider">// JOSEPH MURPHY · LEAD SOFTWARE ENGINEER</span>
+    <span class="font-mono text-[0.58rem] text-dim tracking-wider">MEMPHIS, TN · BUILT WITH TAILWIND CSS</span>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) setTimeout(() => e.target.classList.add('v'), i * 80);
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

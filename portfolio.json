@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Joseph Murphy",
+    "handle": "JMURPHY",
+    "title": "Lead Software Engineer",
+    "location": "Memphis, TN",
+    "tagline": "Software developer with a passion for web services and architecture.",
+    "description": "Lead Software Engineer at <strong>Assurant</strong> with a passion for web services and clean architecture. I drive technical leadership on large-scale insurance platforms, mentor engineers, and advocate for clean architecture and testing best practices.",
+    "status": "OPEN TO WORK",
+    "cmd": "$ php artisan && vue create .",
+    "cmd_comment": "// MBA · 5+ yrs enterprise",
+    "side_labels": ["LARAVEL · VUE.JS · PHP · SWIFT", "MBA · CLEAN ARCH · MENTORSHIP"],
+    "email": "jcmurphy1267@gmail.com",
+    "website": "jmurphy.us"
+  },
+  "social": [
+    { "label": "LINKEDIN", "handle": "in/jmurphyiii", "url": "https://linkedin.com/in/jmurphyiii" },
+    { "label": "WEBSITE",  "handle": "jmurphy.us",    "url": "https://jmurphy.us" },
+    { "label": "EMAIL",    "handle": "jcmurphy1267@gmail.com", "url": "mailto:jcmurphy1267@gmail.com" }
+  ],
+  "experience": [
+    {
+      "company": "Assurant",
+      "role": "Lead Software Engineer",
+      "start": "Oct 2020",
+      "end": "Present",
+      "duration": "5 yrs 6 mos",
+      "current": true,
+      "bullets": [
+        "Lead a <strong>team of 6 engineers</strong> on the API side of a large-scale insurance platform serving multinational enterprise clients, owning architectural direction, technical standards, and cross-functional alignment.",
+        "Architected and leading delivery of a <strong>public-facing integration API</strong> enabling DMS clients and OEM partners to embed quoting and policy booking directly into their platforms via REST — actively partnering with a DMS client and a major OEM toward a production launch.",
+        "Identified zero test coverage as a critical risk and <strong>initiated the project's entire test suite from scratch</strong>, personally driving it from 0% to 55% coverage and establishing testing as a first-class engineering practice.",
+        "Established team-wide <strong>PR standards including conventional commits, enforced PR title conventions, and GitHub Actions gates</strong> that block merges on failing tests — reducing QA-stage regressions by an estimated <strong>30%</strong> and bringing consistency and accountability to every code review.",
+        "Led a <strong>platform-wide performance initiative</strong>, auditing and eliminating legacy data sources and bottlenecks that unlocked measurable throughput gains across core services.",
+        "Partnered with business and data stakeholders to <strong>rationalize and streamline API surface area</strong>, decommissioning irrelevant services and improving overall system cohesion.",
+        "Actively grow junior and mid-level engineers through structured <strong>code reviews, architectural mentorship</strong>, and a culture of engineering excellence.",
+        "Championed the adoption of <strong>AI-assisted development across the team</strong>, integrating GitHub Copilot into daily development workflows and the code review process to accelerate delivery and surface issues earlier in the feedback loop."
+      ],
+      "tags": ["PHP", "Laravel", "REST APIs", "Automated Testing", "GitHub Actions", "GitHub Copilot", "Clean Architecture", "Mentorship"]
+    },
+    {
+      "company": "Follow App",
+      "role": "Technical Co-founder",
+      "start": "Apr 2019",
+      "end": "Apr 2020",
+      "duration": "1 yr 1 mo",
+      "current": false,
+      "bullets": [
+        "Led all technical decisions as co-founder, defining the full <strong>system architecture</strong> for an iOS application and its supporting Web API from concept through production.",
+        "Owned the end-to-end engineering roadmap, balancing <strong>product velocity with architectural integrity</strong> in an early-stage startup environment."
+      ],
+      "tags": ["iOS / Swift", "Web API", "System Architecture", "Startup"]
+    },
+    {
+      "company": "EPG Insurance, Inc.",
+      "role": "Senior Software Engineer",
+      "start": "Apr 2018",
+      "end": "Oct 2020",
+      "duration": "2 yrs 7 mos",
+      "current": false,
+      "location": "Memphis Metropolitan Area",
+      "bullets": [
+        "Drove the strategic migration from a <strong>monolithic architecture to a hybrid microservices model</strong>, improving scalability and reducing inter-system coupling.",
+        "Led full-stack development of an <strong>international insurance platform</strong> in Laravel and championed the adoption of Vue.js as the front-end standard across the engineering team.",
+        "Spearheaded a <strong>package-driven refactor</strong> of core business logic into reusable Laravel packages, enabling consistent delivery across a suite of applications."
+      ],
+      "tags": ["PHP", "Laravel", "Vue.js", "Microservices", "Package Development"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Assurant Quoting API",
+      "description": "Global quoting API enabling international partners to generate insurance quotes and apply for coverage programmatically. Designed for scale across multinational clients.",
+      "stack": "Laravel · REST API · PHP · Enterprise"
+    },
+    {
+      "name": "Follow App",
+      "description": "Co-founded and architected a full iPhone application and Web API from scratch. Owned all technical decisions from infrastructure to app store deployment.",
+      "stack": "iOS · Swift · Web API · Architecture"
+    },
+    {
+      "name": "EPG International Insurance System",
+      "description": "Built an international insurance platform with Laravel and spearheaded the front-end migration to Vue.js. Refactored monolithic core into reusable PHP packages.",
+      "stack": "Laravel · Vue.js · PHP Packages · Microservices"
+    },
+    {
+      "name": "Automated Test Suite",
+      "description": "Comprehensive test infrastructure at Assurant to enforce quality standards across teams, reduce regressions, and enable confident large-scale deployments.",
+      "stack": "PHPUnit · TDD · CI/CD · Quality Assurance"
+    },
+    {
+      "name": "jmurphy.us",
+      "description": "Personal website and portfolio. Built and maintained as an ongoing project to showcase work, writing, and technical explorations.",
+      "stack": "Web · Personal · Portfolio"
+    },
+    {
+      "name": "GiveCamp Memphis",
+      "description": "Annual volunteer event building websites and software for Memphis nonprofits. Active contributor supporting Innovate Memphis and the local tech community.",
+      "stack": "Community · Nonprofit · Web Development"
+    }
+  ]
+}
