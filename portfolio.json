@@ -71,7 +71,7 @@
     {
       "name": "Assurant Quoting API",
       "description": "Global quoting API enabling international partners to generate insurance quotes and apply for coverage programmatically. Designed for scale across multinational clients.",
-      "stack": "Laravel · REST API · PHP · Enterprise"
+      "stack": "Laravel · REST API · PHP · Enterprise "
     },
     {
       "name": "Follow App",
