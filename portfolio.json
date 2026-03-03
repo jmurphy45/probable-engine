@@ -128,14 +128,14 @@
       "stack": "PHPUnit · TDD · CI/CD · Quality Assurance"
     },
     {
-      "name": "jmurphy.us",
-      "description": "Personal website and portfolio. Built and maintained as an ongoing project to showcase work, writing, and technical explorations.",
-      "stack": "Web · Personal · Portfolio"
+      "name": "HandlersHub",
+      "description": "Full-stack SaaS platform for dog clubs and sporting event organizers. Features state machine-driven event lifecycle management, club membership with Stripe billing, breed and health record tracking, and AI-powered marketing content generation.",
+      "stack": "Laravel · Vue.js · Stripe · AI · SaaS"
     },
     {
-      "name": "GiveCamp Memphis",
-      "description": "Annual volunteer event building websites and software for Memphis nonprofits. Active contributor supporting Innovate Memphis and the local tech community.",
-      "stack": "Community · Nonprofit · Web Development"
+      "name": "Web Crawler",
+      "description": "Production-ready distributed web crawler with a Redis-backed priority queue, multi-worker crawl pipeline, sentiment analysis, and a FastAPI layer over PostgreSQL storage. Designed for scale with full Docker orchestration.",
+      "stack": "Python · Redis · PostgreSQL · FastAPI · Docker"
     }
   ]
 }
