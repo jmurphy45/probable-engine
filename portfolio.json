@@ -67,6 +67,45 @@
       "tags": ["PHP", "Laravel", "Vue.js", "Microservices", "Package Development"]
     }
   ],
+  "education": [
+    {
+      "school": "The University of Memphis",
+      "degree": "Master of Business Administration — MBA",
+      "field": "Professional",
+      "grade": "3.96 / 4.00",
+      "start": "2015",
+      "end": "2017",
+      "highlights": [
+        "Crews Center for Entrepreneurship Fellowship",
+        "Launch Tennessee Student Advisory Committee"
+      ]
+    },
+    {
+      "school": "The University of Memphis",
+      "degree": "Bachelor of Science — BS",
+      "field": "Mathematics & Computer Science",
+      "grade": "3.58 / 4.00",
+      "honors": "Magna Cum Laude",
+      "start": "2012",
+      "end": "2017",
+      "highlights": [
+        "Alpha Lambda Delta Honor Society",
+        "Omicron Delta Kappa Honor Society",
+        "Sigma Alpha Lambda Honor Society",
+        "Lambda Chi Alpha — Treasurer, Vice President",
+        "Dean's List — Fall 2012 through Spring 2016"
+      ]
+    },
+    {
+      "school": "Christian Brothers High School Memphis",
+      "degree": "College Prep",
+      "field": null,
+      "grade": null,
+      "start": null,
+      "end": null,
+      "highlights": []
+    }
+  ],
   "projects": [
     {
       "name": "Assurant Quoting API",
