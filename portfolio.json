@@ -5,7 +5,7 @@
     "title": "Lead Software Engineer",
     "location": "Memphis, TN",
     "tagline": "Engineering leader who treats APIs and automated testing as first-class citizens — building systems and teams that scale.",
-    "description": "Engineering leader with 8+ years building enterprise-grade systems and high-performance teams. I operate with an <strong>API-first philosophy</strong> — APIs are products, not afterthoughts — and treat <strong>automated testing as a non-negotiable engineering standard</strong>. At Assurant I lead a team of 6, architecting public-facing REST APIs for multinational clients and driving the engineering practices that compress risk and accelerate delivery.",
+    "description": "Engineering leader with {{years}}+ years building enterprise-grade systems and high-performance teams. I operate with an <strong>API-first philosophy</strong> — APIs are products, not afterthoughts — and treat <strong>automated testing as a non-negotiable engineering standard</strong>. At Assurant I lead a team of 6, architecting public-facing REST APIs for multinational clients and driving the engineering practices that compress risk and accelerate delivery.",
     "status": "OPEN TO WORK",
     "cmd": "$ design --api-first | test --coverage=100",
     "cmd_comment": "// MBA · 8+ yrs · APIs & Testing",

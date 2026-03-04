@@ -125,6 +125,13 @@ function renderSocial(items) {
   </a>`).join('');
 }
 
+const earliestStart = experience
+  .map(j => new Date(j.start))
+  .filter(d => !isNaN(d))
+  .reduce((min, d) => d < min ? d : min, new Date());
+const yearsExperience = Math.floor((Date.now() - earliestStart) / (1000 * 60 * 60 * 24 * 365.25));
+meta.description = meta.description.replace('{{years}}', yearsExperience);
+
 const [firstName, ...rest] = meta.name.split(' ');
 
 const html = `<!DOCTYPE html>
