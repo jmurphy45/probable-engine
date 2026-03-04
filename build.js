@@ -9,9 +9,16 @@ function esc(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+function parseJobDate(str) {
+  if (!str || str === 'Present') return Infinity;
+  const d = new Date(str);
+  return isNaN(d) ? 0 : d.getTime();
+}
+
 function renderExperience(jobs) {
-  return jobs.map((job, i) => {
-    const isLast = i === jobs.length - 1;
+  const sorted = [...jobs].sort((a, b) => parseJobDate(b.start) - parseJobDate(a.start));
+  return sorted.map((job, i) => {
+    const isLast = i === sorted.length - 1;
     const borderClass = isLast ? 'border-t border-b border-border' : 'border-t border-border';
 
     const bullets = job.bullets.map(b => `
@@ -72,11 +79,12 @@ function renderProjects(items) {
 }
 
 function renderEducation(items) {
-  return items.map((e, i) => {
-    const isLast = i === items.length - 1;
+  const visible = items.filter(e => !e.hidden);
+  return visible.map((e, i) => {
+    const isLast = i === visible.length - 1;
     const borderClass = isLast ? 'border-t border-b border-border' : 'border-t border-border';
 
-    const dateText = e.start ? `${e.start} → ${e.end}` : 'High School';
+    const dateText = e.end ? e.end : null;
 
     let metaLine = '';
     if (e.grade && e.honors) {
@@ -97,7 +105,7 @@ function renderEducation(items) {
     return `    <div class="${borderClass} hover:bg-white/[0.01] transition-colors fi">
       <div class="flex flex-col sm:grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 px-0">
         <div class="flex sm:flex-col gap-3 sm:gap-0 sm:pt-0.5 items-center sm:items-start">
-          <p class="font-mono text-[0.65rem] text-dim leading-relaxed">${esc(dateText)}</p>
+          ${dateText ? `<p class="font-mono text-[0.65rem] text-dim leading-relaxed">${esc(dateText)}</p>` : ''}
         </div>
         <div>
           <p class="font-bold text-bright tracking-tight mb-0.5 text-lg">${esc(e.school)}</p>
@@ -117,6 +125,13 @@ function renderSocial(items) {
   </a>`).join('');
 }
 
+const earliestStart = experience
+  .map(j => new Date(j.start))
+  .filter(d => !isNaN(d))
+  .reduce((min, d) => d < min ? d : min, new Date());
+const yearsExperience = Math.ceil((Date.now() - earliestStart) / (1000 * 60 * 60 * 24 * 365.25));
+meta.description = meta.description.replace('{{years}}', yearsExperience);
+
 const [firstName, ...rest] = meta.name.split(' ');
 
 const html = `<!DOCTYPE html>
@@ -125,6 +140,14 @@ const html = `<!DOCTYPE html>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(meta.name)} · ${esc(meta.title)}</title>
+  <meta name="description" content="${esc(meta.tagline)}" />
+  <meta property="og:title" content="${esc(meta.name)} · ${esc(meta.title)}" />
+  <meta property="og:description" content="${esc(meta.tagline)}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://${esc(meta.website)}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="${esc(meta.name)} · ${esc(meta.title)}" />
+  <meta name="twitter:description" content="${esc(meta.tagline)}" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <script>
@@ -261,7 +284,7 @@ ${renderEducation(education)}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border fi">
       <div class="bg-bg p-7 sm:p-11">
         <h3 class="text-xl font-bold text-bright tracking-tight mb-3">Let's build something.</h3>
-        <p class="text-dim text-sm leading-loose mb-8 max-w-sm">Open to Lead Software Engineer roles and interesting problems. Memphis-based, but happy to connect anywhere.</p>
+        <p class="text-dim text-sm leading-loose mb-8 max-w-sm">${esc(meta.contact_blurb || 'Open to senior engineering and leadership roles. Memphis-based, but happy to connect anywhere.')}</p>
         <a href="mailto:${esc(meta.email)}" class="font-mono text-sm text-accent border-b border-accent/30 hover:border-accent pb-0.5 transition-all break-all">${esc(meta.email)}</a>
       </div>
       <div class="bg-bg px-7 sm:px-11 py-7 sm:py-0 sm:flex sm:flex-col sm:justify-center">
