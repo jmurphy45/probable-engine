@@ -9,9 +9,16 @@ function esc(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+function parseJobDate(str) {
+  if (!str || str === 'Present') return Infinity;
+  const d = new Date(str);
+  return isNaN(d) ? 0 : d.getTime();
+}
+
 function renderExperience(jobs) {
-  return jobs.map((job, i) => {
-    const isLast = i === jobs.length - 1;
+  const sorted = [...jobs].sort((a, b) => parseJobDate(b.start) - parseJobDate(a.start));
+  return sorted.map((job, i) => {
+    const isLast = i === sorted.length - 1;
     const borderClass = isLast ? 'border-t border-b border-border' : 'border-t border-border';
 
     const bullets = job.bullets.map(b => `
@@ -77,7 +84,7 @@ function renderEducation(items) {
     const isLast = i === visible.length - 1;
     const borderClass = isLast ? 'border-t border-b border-border' : 'border-t border-border';
 
-    const dateText = e.start ? `${e.start} → ${e.end}` : 'High School';
+    const dateText = e.end ? e.end : null;
 
     let metaLine = '';
     if (e.grade && e.honors) {
@@ -98,7 +105,7 @@ function renderEducation(items) {
     return `    <div class="${borderClass} hover:bg-white/[0.01] transition-colors fi">
       <div class="flex flex-col sm:grid sm:grid-cols-[140px_1fr] gap-4 sm:gap-8 py-8 px-0">
         <div class="flex sm:flex-col gap-3 sm:gap-0 sm:pt-0.5 items-center sm:items-start">
-          <p class="font-mono text-[0.65rem] text-dim leading-relaxed">${esc(dateText)}</p>
+          ${dateText ? `<p class="font-mono text-[0.65rem] text-dim leading-relaxed">${esc(dateText)}</p>` : ''}
         </div>
         <div>
           <p class="font-bold text-bright tracking-tight mb-0.5 text-lg">${esc(e.school)}</p>
