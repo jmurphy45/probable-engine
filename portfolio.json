@@ -4,19 +4,21 @@
     "handle": "JMURPHY",
     "title": "Lead Software Engineer",
     "location": "Memphis, TN",
-    "tagline": "Software developer with a passion for web services and architecture.",
-    "description": "Lead Software Engineer at <strong>Assurant</strong> with a passion for web services and clean architecture. I drive technical leadership on large-scale insurance platforms, mentor engineers, and advocate for clean architecture and testing best practices.",
+    "tagline": "Engineering leader who treats APIs and automated testing as first-class citizens — building systems and teams that scale.",
+    "description": "Engineering leader with {{years}}+ years building enterprise-grade systems and high-performance teams. I operate with an <strong>API-first philosophy</strong> — APIs are products, not afterthoughts — and treat <strong>automated testing as a non-negotiable engineering standard</strong>. At Assurant I lead a team of 6, architecting public-facing REST APIs for multinational clients and driving the engineering practices that compress risk and accelerate delivery.",
     "status": "OPEN TO WORK",
-    "cmd": "$ php artisan && vue create .",
-    "cmd_comment": "// MBA · 5+ yrs enterprise",
-    "side_labels": ["LARAVEL · VUE.JS · PHP · SWIFT", "MBA · CLEAN ARCH · MENTORSHIP"],
+    "cmd": "$ design --api-first | test --coverage=100",
+    "cmd_comment": "// MBA · 8+ yrs · APIs & Testing",
+    "side_labels": ["API-FIRST · REST · PHP · LARAVEL · PYTHON", "MBA · AUTOMATED TESTING · AI-NATIVE"],
     "email": "jcmurphy1267@gmail.com",
-    "website": "jmurphy.us"
+    "website": "<jmurphy.us>",
+    "contact_blurb": "Open to Staff Engineer, Principal Engineer, and Engineering Manager roles where API design and engineering rigor are taken seriously. Memphis-based, but happy to connect anywhere."
   },
   "social": [
-    { "label": "LINKEDIN", "handle": "in/jmurphyiii", "url": "https://linkedin.com/in/jmurphyiii" },
-    { "label": "WEBSITE",  "handle": "jmurphy.us",    "url": "https://jmurphy.us" },
-    { "label": "EMAIL",    "handle": "jcmurphy1267@gmail.com", "url": "mailto:jcmurphy1267@gmail.com" }
+    { "label": "GITHUB",   "handle": "<github.com/jmurphy45>",   "url": "<https://github.com/jmurphy45>" },
+    { "label": "LINKEDIN", "handle": "in/jmurphyiii",           "url": "<https://linkedin.com/in/jmurphyiii>" },
+    { "label": "WEBSITE",  "handle": "<jmurphy.us>",              "url": "<https://jmurphy.us>" },
+    { "label": "EMAIL",    "handle": "jcmurphy1267@gmail.com",  "url": "mailto:jcmurphy1267@gmail.com" }
   ],
   "experience": [
     {
@@ -103,14 +105,15 @@
       "grade": null,
       "start": null,
       "end": null,
-      "highlights": []
+      "highlights": [],
+      "hidden": true
     }
   ],
   "projects": [
     {
       "name": "Assurant Quoting API",
       "description": "Global quoting API enabling international partners to generate insurance quotes and apply for coverage programmatically. Designed for scale across multinational clients.",
-      "stack": "Laravel · REST API · PHP · Enterprise "
+      "stack": "Laravel · REST API · PHP · Enterprise"
     },
     {
       "name": "Follow App",
@@ -139,3 +142,4 @@
     }
   ]
 }
+
